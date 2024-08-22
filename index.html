@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#09f">
+
+    <link rel="icon" type="image/png" href="/Assets/programming-icon.png">
+</head>
+<body>
+    
+    <!--ENCABEZADO-->
+    
+    <header>
+        <img class="logo" href="http://127.0.0.1:5500/index.html" src="./Assets/Logo.png" alt="Logo de Alura">
+    </header>
+
+    <!--CUERPO-->
+
+    <main>
+        <section class="seccion_izquierda">
+            <textarea class="texto_a_encriptar" type="text" name="texto_a_encriptar" cols="30" rows="10" onkeyup="forzar_minusculas(this); forzar_letras(this)" id="texto_a_encriptar" required placeholder="Ingrese el texto aqui"></textarea>
+            <div class="caja_1">
+                <img src="/Assets/Vector.png" alt="imagen_anuncio">
+                <p class="anuncio_1">
+                    Solo letras minúsculas y sin acentos
+                </p>
+            </div>
+            <div class="contenedor_botones">
+                <button class="botones_link_encriptar" onclick="botonEncriptar()" >Encriptar</button>
+                <button class="botones_link_desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="contenedor_tarjeta">
+            <textarea class="texto_resultado" id="text_Area" cols="20" rows="10" readonly></textarea>
+            <div class="caja_2">
+                <button class="botones_link_copiar" onclick="copy()" type="submit">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+
+    <footer class="footer">
+        <small> Desarrollado por Alejandro Bonilla </small>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
